@@ -1,0 +1,27 @@
+<main class="main bg-dark">
+  <section class="sign-in-content">
+    <i class="fa fa-user-circle sign-in-icon"></i>
+    <h1>Sign In</h1>
+    <form [formGroup]="signInForm" (ngSubmit)="onLogin()">
+      <div class="input-wrapper">
+        <label for="email">Username</label>
+        <input type="text" id="email" formControlName="email" />
+        <small class="error-message" *ngIf="signInForm.controls.email.errors && signInForm.controls.email?.touched">
+          Ce champ doit comporter au moins 2 caractères.
+        </small>
+      </div>
+      <div class="input-wrapper">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" />
+        <small class="error-message" *ngIf="signInForm.controls.password.errors && signInForm.controls.password?.touched">
+          Ce champ doit comporter au moins 2 caractères.
+        </small>
+      </div>
+      <div class="input-remember">
+        <input type="checkbox" id="remember-me" formControlName="rememberMe" />
+        <label for="remember-me">Remember me</label>
+      </div>
+      <button class="sign-in-button" [disabled]="signInForm.invalid">Sign In</button>
+    </form>
+  </section>
+</main>

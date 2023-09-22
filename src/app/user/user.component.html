@@ -1,0 +1,13 @@
+  <main class="main bg-dark">
+   <div class="header">
+     <h1>
+       Welcome back
+       <br />
+       Tony Jarvis!
+     </h1>
+     <button class="edit-button" (click)="setModalIsOpen(true)">Edit Name</button>
+   </div>
+   <h2 class="sr-only">Accounts</h2>
+     <app-card-account-user *ngFor="let item of data"  [account]="item" ></app-card-account-user>
+     <app-modal [modalIsOpen]="modalIsOpen" (setModalIsOpen)="setModalIsOpen($event)"></app-modal>
+ </main>

@@ -1,0 +1,44 @@
+<!-- <div
+      id="myModal"
+      class="modal"
+      style={{ display: modalIsOpen ? "block" : "none" }}
+      (click)="setModalIsOpen.emit(false)"
+    >
+      <div class="modal-content">
+        <span class="close" (click)="setModalIsOpen.emit(false)">
+          &times;
+        </span>
+        <h2>Edit Name</h2>
+        <form onSubmit={handleSubmit}>
+          <div class="input-wrapper">
+            <label htmlFor="first_name">First Name:</label>
+            <input
+              type="text"
+              id="first_name"
+              [value]="firstName"
+              onChange={(e) => {
+                setFirstName(e.target.value);
+                validateInput("firstName", e.target.value);
+              }}
+              required
+            />
+            <small class="error-message">{errors.firstName}</small>
+          </div>
+          <div class="input-wrapper">
+            <label htmlFor="last_name">Last Name:</label>
+            <input
+              type="text"
+              id="last_name"
+              [value]="lastName"
+              onChange={(e) => {
+                setLastName(e.target.value);
+                validateInput("lastName", e.target.value);
+              }}
+              required
+            />
+            <small class="error-message">{{errors.lastName}}</small>
+          </div>
+          <button class="sign-in-button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div> -->
